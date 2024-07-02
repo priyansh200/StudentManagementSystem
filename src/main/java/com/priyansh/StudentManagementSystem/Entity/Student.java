@@ -14,7 +14,7 @@ public class Student {
 	private String email;
 	private String password;
 	
-	private String Course_id;
+	private int Course_id;
 	public int getStud_id() {
 		return Stud_id;
 	}
@@ -39,11 +39,11 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getCourse_id() {
+	public int getCourse_id() {
 		return Course_id;
 	}
 	//@JoinColumn(Course_id= Courses.Course_id )
-	public void setCourse_id(String course_id) {
+	public void setCourse_id(int course_id) {
 		Course_id = course_id;
 	}
 	public Student() {
