@@ -1,5 +1,7 @@
 package com.priyansh.StudentManagementSystem.service;
 
-public interface StudentService {
+import com.priyansh.StudentManagementSystem.Entity.Student;
 
+public interface StudentService {
+	Student addStudent(Student s);
 }
