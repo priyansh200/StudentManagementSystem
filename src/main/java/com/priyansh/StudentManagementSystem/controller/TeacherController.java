@@ -18,8 +18,7 @@ import com.priyansh.StudentManagementSystem.service.StudentService;
 @RequestMapping("/Teacher")
 public class TeacherController {
 
-	@Autowired
-	private DepartmentService DS;
+
 	
 	@Autowired
 	private CourseService CS;
@@ -27,11 +26,6 @@ public class TeacherController {
 	@Autowired
 	private StudentService SS;
 	
-	@GetMapping("/Dept")
-	public List<Department> getDepartment(){
-		return DS.getDepartment();
-	}
-
 	@GetMapping("/Student")
 	public List<Student> getStudent(){
 		return SS.getStudent();

@@ -3,6 +3,7 @@ package com.priyansh.StudentManagementSystem.Entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 
 
 @Entity
@@ -13,8 +14,12 @@ public class Student {
 	private String name;
 	private String email;
 	private String password;
-	
-	private int Course_id;
+	@OneToOne
+    @JoinColumn(name = "course_id", referencedColumnName = "course_id")
+	private Course course_id;
+	@OneToOne
+    @JoinColumn(name = "tech_id", referencedColumnName = "tech_id")
+	private Teacher tech_id;
 	public int getStud_id() {
 		return Stud_id;
 	}
@@ -39,12 +44,19 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getCourse_id() {
-		return Course_id;
+	public Course getCourse_id() {
+		return course_id;
 	}
 	//@JoinColumn(Course_id= Courses.Course_id )
-	public void setCourse_id(int course_id) {
-		Course_id = course_id;
+	public void setCourse_id(Course course_id) {
+		this.course_id = course_id;
+	}
+	
+	public Teacher getTech_id() {
+		return tech_id;
+	}
+	public void setTech_id(Teacher tech_id) {
+		this.tech_id = tech_id;
 	}
 	public Student() {
 		super();
@@ -53,11 +65,9 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [Stud_id=" + Stud_id + ", name=" + name + ", email=" + email + ", password=" + password
-				+ ", Course_id=" + Course_id + "]";
+		return "Student [name=" + name + ", email=" + email + ", password=" + password + ", Course_id=" + course_id
+				+ ", tech_id=" + tech_id + "]";
 	}
-	
-	
 	
 	
 }

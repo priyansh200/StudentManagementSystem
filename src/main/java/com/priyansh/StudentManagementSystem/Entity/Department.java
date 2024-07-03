@@ -43,9 +43,10 @@ public class Department {
 	
 
 
+
 	@Override
 	public String toString() {
-		return "Department [Dept_id=" + Dept_id + ", name=" + name + ", HOD=" + HOD + "]";
+		return "Department [name=" + name + ", HOD=" + HOD + "]";
 	}
 
 

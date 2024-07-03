@@ -8,20 +8,17 @@ import org.springframework.stereotype.Service;
 import com.priyansh.StudentManagementSystem.Entity.Course;
 import com.priyansh.StudentManagementSystem.Entity.Department;
 import com.priyansh.StudentManagementSystem.Entity.Student;
+import com.priyansh.StudentManagementSystem.Entity.Teacher;
 import com.priyansh.StudentManagementSystem.repository.CourseRepository;
 import com.priyansh.StudentManagementSystem.repository.DepartmentRepository;
 import com.priyansh.StudentManagementSystem.repository.StudnetRepository;
+import com.priyansh.StudentManagementSystem.repository.TeacherRepository;
 import com.priyansh.StudentManagementSystem.service.TeacherService;
 
 @Service
 public class TeacherServiceImplements implements TeacherService{
 
-	@Autowired
-	DepartmentRepository DS;
-	
-	public List<Department> getDepartment(){
-		return DS.findAll();
-	}
+
 	
 	@Autowired
 	StudnetRepository SS;
@@ -35,5 +32,12 @@ public class TeacherServiceImplements implements TeacherService{
 	
 	public List<Course> getCourse(){
 		return CS.findAll();
+	}
+	
+	@Autowired
+	TeacherRepository TS;
+	
+	public List<Teacher> getTeacher(){
+		return TS.findAll();
 	}
 }

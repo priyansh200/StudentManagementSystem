@@ -2,6 +2,8 @@ package com.priyansh.StudentManagementSystem.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Teacher {
@@ -10,7 +12,9 @@ public class Teacher {
 	private int tech_id;
 	private String name;
 	private String subject;
-	private String course_id;
+	@OneToOne
+    @JoinColumn(name = "course_id", referencedColumnName = "course_id")
+	private Course course_id;
 	public int getTech_id() {
 		return tech_id;
 	}
@@ -29,10 +33,10 @@ public class Teacher {
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
-	public String getCourse_id() {
+	public Course getCourse_id() {
 		return course_id;
 	}
-	public void setCourse_id(String course_id) {
+	public void setCourse_id(Course course_id) {
 		this.course_id = course_id;
 	}
 	public Teacher() {
@@ -41,8 +45,7 @@ public class Teacher {
 	}
 	@Override
 	public String toString() {
-		return "Teacher [tech_id=" + tech_id + ", name=" + name + ", subject=" + subject + ", course_id=" + course_id
-				+ "]";
+		return "Teacher [name=" + name + ", subject=" + subject + ", course_id=" + course_id + "]";
 	}
 	
 	
