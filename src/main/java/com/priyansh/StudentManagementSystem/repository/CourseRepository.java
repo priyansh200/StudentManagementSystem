@@ -9,6 +9,5 @@ import com.priyansh.StudentManagementSystem.Entity.Course;
 @Repository
 
 public interface CourseRepository  extends JpaRepository<Course,Long> {
-	@EntityGraph(attributePaths = {"course_id", "name", "dept_id" , "tech_id"})
-    List<Course> findAll();
+	
 }

@@ -12,6 +12,4 @@ import com.priyansh.StudentManagementSystem.Entity.Student;
 
 public interface StudnetRepository extends JpaRepository<Student,Long> {
 
-	@EntityGraph(attributePaths = {"stud_id","name", "email" , "password" , "course_id"})
-    List<Student> findAll();
 }

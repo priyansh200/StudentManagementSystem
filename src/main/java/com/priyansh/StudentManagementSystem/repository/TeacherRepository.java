@@ -10,6 +10,4 @@ import com.priyansh.StudentManagementSystem.Entity.Teacher;
 @Repository
 public interface TeacherRepository extends JpaRepository<Teacher,Long> {
 	
-	@EntityGraph(attributePaths = {"tech_id","name", "subject" , "course_id"})
-    List<Teacher> findAll();
 }

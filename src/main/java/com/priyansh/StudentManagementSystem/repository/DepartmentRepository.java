@@ -12,7 +12,4 @@ import com.priyansh.StudentManagementSystem.Entity.Department;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department,Long> {
 
-	@EntityGraph(attributePaths = {"dept_id","name", "hod"})
-    List<Department> findAll();
-	
 }
