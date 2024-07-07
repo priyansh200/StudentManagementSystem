@@ -10,22 +10,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.priyansh.StudentManagementSystem.Entity.Books;
-import com.priyansh.StudentManagementSystem.Entity.Student;
 import com.priyansh.StudentManagementSystem.repository.BookRepository;
 
 @RestController
-@RequestMapping("/Book")
+@RequestMapping("/Librarian")
 public class BookController {
 	
 	@Autowired
 	BookRepository BS;
 	
-	@PostMapping("/Add")
+	@PostMapping("/AddBook")
 	public Books addBooks(@RequestBody Books b) {
-		return BS.addBooks(b); 
+		return ((BookController) BS).addBooks(b);
 	}
 	
-	@GetMapping("/Show")
+	
+	@GetMapping("/SAB")
 	public List<Books> getBooks(){
 		return BS.findAll();
 	}

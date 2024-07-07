@@ -6,32 +6,27 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
 @Entity
-public class Books {
+public class fees {
+	
 	@Id
 	private int id;
-	private String Book_name;
-	private String author;
+	private String fees;
+	private String status;
 	@OneToOne
     @JoinColumn(name = "student", referencedColumnName = "id")
 	private Student student;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	
-	public String getBook_name() {
-		return Book_name;
+	public String getFees() {
+		return fees;
 	}
-	public void setBook_name(String book_name) {
-		Book_name = book_name;
+	public void setFees(String fees) {
+		this.fees = fees;
 	}
-	public String getAuthor() {
-		return author;
+	public String getStatus() {
+		return status;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public Student getStudent() {
 		return student;
@@ -39,13 +34,22 @@ public class Books {
 	public void setStudent(Student student) {
 		this.student = student;
 	}
-	public Books() {
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public fees() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	@Override
 	public String toString() {
-		return "Books [ Book_name=" + Book_name + ", author=" + author + ", student=" + student + "]";
+		return "fees [fees=" + fees + ", status=" + status + ", student=" + student + "]";
 	}
 	
 }

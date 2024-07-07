@@ -19,13 +19,13 @@ import com.priyansh.StudentManagementSystem.service.TeacherService;
 public class TeacherServiceImplements implements TeacherService{
 
 
-	
-	@Autowired
-	StudnetRepository SS;
-	
-	public List<Student> getStudent(){
-		return SS.findAll();
-	}
+//	
+//	@Autowired
+//	StudnetRepository SS;
+//	
+//	public List<Student> getStudent(){
+//		return SS.findAll();
+//	}
 	
 	@Autowired
 	CourseRepository CS;
@@ -34,10 +34,10 @@ public class TeacherServiceImplements implements TeacherService{
 		return CS.findAll();
 	}
 	
-	@Autowired
-	TeacherRepository TS;
-	
-	public List<Teacher> getTeacher(){
-		return TS.findAll();
-	}
+//	@Autowired
+//	TeacherRepository TS;
+//	
+//	public List<Teacher> getTeacher(){
+//		return TS.findAll();
+//	}
 }

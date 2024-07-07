@@ -1,16 +1,10 @@
 package com.priyansh.StudentManagementSystem.repository;
 
-
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.priyansh.StudentManagementSystem.Entity.Books;
-
+import com.priyansh.StudentManagementSystem.Entity.fees;
 
 @Repository
-public interface BookRepository extends JpaRepository<Books,Long> {
+public interface feeRepository extends JpaRepository<fees,Long> {
 
-	
 }
-

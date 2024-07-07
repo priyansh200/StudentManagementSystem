@@ -3,6 +3,7 @@ package com.priyansh.StudentManagementSystem.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,41 +23,36 @@ import com.priyansh.StudentManagementSystem.service.DepartmentService;
 @RequestMapping("/HOD")
 public class DepartmentController {
 	
-	@Autowired
-	private DepartmentService DS;
+	//@Autowired
+	//private DepartmentService DS;
 	@Autowired
 	private StudnetRepository SS;
-	@Autowired
-	private CourseRepository CS;
-	@Autowired
-	private TeacherRepository TS;
+	//@Autowired
+	//private CourseRepository CS;
+	//@Autowired
+	//private TeacherRepository TS;
 	
-	@GetMapping("/Student")
-	public List<Student> getStudent(){
+	@GetMapping("/SBD")
+	public List<Student> getStudent() {
 		return SS.findAll();
 	}
 	
 	
-	@GetMapping("/Dept")
-	public List<Department> getDepartment(){
-		return DS. getDepartment();
-	}
-	
-	
-	@GetMapping("/Course")
-	public List<Course> getCourse(){
-		return CS.findAll();
-	}
-	
-
-	@GetMapping("/Teacher")
-	public List<Teacher> getTeacher(){
-		return TS.findAll();
-	}
-	
-	
-	
-	
-	
+//	@GetMapping("/DBD")
+//	public List<Department> getDepartment(){
+//		return DS. getDepartment();
+//	}
+//	
+//	
+//	@GetMapping("/CBD")
+//	public List<Course> getCourse(){
+//		return CS.findAll();
+//	}
+//	
+//
+//	@GetMapping("/TBD")
+//	public List<Teacher> getTeacher(){
+//		return TS.findAll();
+//	}
 
 }

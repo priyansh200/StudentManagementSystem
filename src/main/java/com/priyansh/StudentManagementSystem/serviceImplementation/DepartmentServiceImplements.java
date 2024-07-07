@@ -13,18 +13,20 @@ import com.priyansh.StudentManagementSystem.service.DepartmentService;
 
 @Service
 public class DepartmentServiceImplements implements DepartmentService {
+	
 	@Autowired
 	StudnetRepository SS;
 	
-	@Autowired
-	DepartmentRepository DS;
+//	@Autowired
+//	DepartmentRepository DS;
 	
-	public List<Student> getStudent(){
+//	public List<Department> getDepartment(){
+//		return DS.findAll();
+//	}
+
+	@Override
+	public List<Student> getStudent() {
 		return SS.findAll();
-	}
-	
-	public List<Department> getDepartment(){
-		return DS.findAll();
 	}
 	
 }

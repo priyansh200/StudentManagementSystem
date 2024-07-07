@@ -9,23 +9,22 @@ import jakarta.persistence.OneToOne;
 public class Teacher {
 	
 	@Id
-	private int tech_id;
-	private String name;
+	private int id;
+	private String Teacher_name;
 	private String subject;
-	@OneToOne
-    @JoinColumn(name = "course_id", referencedColumnName = "course_id")
-	private Course course_id;
-	public int getTech_id() {
-		return tech_id;
+	
+	public int getId() {
+		return id;
 	}
-	public void setTech_id(int tech_id) {
-		this.tech_id = tech_id;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getName() {
-		return name;
+	
+	public String getTeacher_name() {
+		return Teacher_name;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setTeacher_name(String teacher_name) {
+		Teacher_name = teacher_name;
 	}
 	public String getSubject() {
 		return subject;
@@ -33,19 +32,13 @@ public class Teacher {
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
-	public Course getCourse_id() {
-		return course_id;
-	}
-	public void setCourse_id(Course course_id) {
-		this.course_id = course_id;
-	}
 	public Teacher() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "Teacher [name=" + name + ", subject=" + subject + ", course_id=" + course_id + "]";
+		return "Teacher [Teacher_name=" + Teacher_name + ", subject=" + subject + "]";
 	}
 	
 	

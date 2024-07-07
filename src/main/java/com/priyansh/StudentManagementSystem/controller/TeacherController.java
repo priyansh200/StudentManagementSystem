@@ -22,16 +22,16 @@ public class TeacherController {
 	
 	@Autowired
 	private CourseService CS;
+//	
+//	@Autowired
+//	private StudentService SS;
+//	
+//	@GetMapping("/SBT")
+//	public List<Student> getStudent(){
+//		return SS.getStudent();
+//	}
 	
-	@Autowired
-	private StudentService SS;
-	
-	@GetMapping("/Student")
-	public List<Student> getStudent(){
-		return SS.getStudent();
-	}
-	
-	@GetMapping("/Course")
+	@GetMapping("/CBT")
 	public List<Course> getCourse(){
 		return CS.getCourse();
 	}

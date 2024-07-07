@@ -8,6 +8,6 @@ import com.priyansh.StudentManagementSystem.Entity.Course;
 public interface TeacherService {
 
 	public List<Course> getCourse();
-	public List<Student> getStudent();
-	public List<Teacher> getTeacher();
+	//public List<Student> getStudent();
+	//public List<Teacher> getTeacher();
 }

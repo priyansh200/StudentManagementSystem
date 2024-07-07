@@ -8,39 +8,38 @@ import jakarta.persistence.OneToOne;
 @Entity
 public class Course {
 	@Id
-	private int course_id;
-	private String name;
+	private int id;
+	private String Course_name;
 	@OneToOne
-    @JoinColumn(name = "dept_id", referencedColumnName = "dept_id")
-	private Department dept_id;
-	public int getCourse_id() {
-		return course_id;
+    @JoinColumn(name = "teacher", referencedColumnName = "id")
+	private Teacher teacher;
+	public int getId() {
+		return id;
 	}
-	public void setCourse_id(int course_id) {
-		this.course_id = course_id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+	public void setId(int id) {
+		this.id = id;
 	}
 	
-	public Department getDept_id() {
-		return dept_id;
-	}
-	public void setDept_id(Department dept_id) {
-		this.dept_id = dept_id;
-	}
 	
+	public String getCourse_name() {
+		return Course_name;
+	}
+	public void setCourse_name(String course_name) {
+		Course_name = course_name;
+	}
+	public Teacher getTeacher() {
+		return teacher;
+	}
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
+	}
 	public Course() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "Course [name=" + name + ", dept_id=" + dept_id + "]";
+		return "Course [ Course_name=" + Course_name + ", teacher=" + teacher + "]";
 	}
-	
 	
 }
