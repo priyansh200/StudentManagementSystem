@@ -20,13 +20,16 @@ public class feeServiceImplements implements feeService{
 		return FS.findAll();
 	}
 	
-	public fees updatefee(fees f,Long stud_id)
+	public fees updatefee(fees f,Long id)
     {
- 
-        fees fs = new fees();
+
+        fees fs = FS.findById(id).get();
         if (Objects.nonNull(f.getStatus())&& !"".equalsIgnoreCase(f.getStatus()))
-        {
+        { 
+        	
             fs.setStatus(f.getStatus());
+           
+            
         }
  
         return FS.save(fs);

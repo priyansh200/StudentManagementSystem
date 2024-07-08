@@ -12,7 +12,8 @@ import com.priyansh.StudentManagementSystem.Entity.Student;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department,Long> {
 	
-	//@Query( nativeQuery = true , value = "select d from Student where d.course_id =:d")
+	//@Query( nativeQuery = true , value = "select d from Student where d.course_id=:d")
 	//Optional<Student>findAll(@Param("course_id")int d);
 }
+
 

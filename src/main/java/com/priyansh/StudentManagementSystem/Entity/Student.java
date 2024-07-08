@@ -10,17 +10,17 @@ import jakarta.persistence.OneToOne;
 
 public class Student {
 	@Id
-	private int id;
+	private Long id;
 	private String Student_name;
 	private String email;
 	private String password;
 	@OneToOne
     @JoinColumn(name = "department", referencedColumnName = "id")
 	private Department department;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	

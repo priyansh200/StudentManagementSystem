@@ -22,14 +22,6 @@ public class TeacherController {
 	
 	@Autowired
 	private CourseService CS;
-//	
-//	@Autowired
-//	private StudentService SS;
-//	
-//	@GetMapping("/SBT")
-//	public List<Student> getStudent(){
-//		return SS.getStudent();
-//	}
 	
 	@GetMapping("/CBT")
 	public List<Course> getCourse(){

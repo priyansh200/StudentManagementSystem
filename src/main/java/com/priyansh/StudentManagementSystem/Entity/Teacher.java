@@ -9,14 +9,14 @@ import jakarta.persistence.OneToOne;
 public class Teacher {
 	
 	@Id
-	private int id;
+	private Long id;
 	private String Teacher_name;
 	private String subject;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	

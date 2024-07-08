@@ -6,8 +6,8 @@ import com.priyansh.StudentManagementSystem.Entity.Department;
 import com.priyansh.StudentManagementSystem.Entity.Student;
 
 public interface DepartmentService {
-	public List<Student> getStudent();
+	
+	public List<Department> getDepartment();
 
-	//public List<Department> getDepartment();
 
 }

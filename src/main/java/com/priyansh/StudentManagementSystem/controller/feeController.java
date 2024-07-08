@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.priyansh.StudentManagementSystem.Entity.fees;
-import com.priyansh.StudentManagementSystem.repository.feeRepository;
+
 import com.priyansh.StudentManagementSystem.service.feeService;
 
 @RestController
@@ -19,18 +19,17 @@ import com.priyansh.StudentManagementSystem.service.feeService;
 public class feeController {
 
 	@Autowired
-	private feeRepository FS;
+	private feeService FS;
 	
 	@GetMapping("/SAF")
 	public List<fees> getfees(){
-		return FS.findAll();
+		return FS.getfees();
 	}
 	
-	@PutMapping("/update/{student}")
-	 
-    public fees updatefee(@RequestBody fees f, @PathVariable("student") Long student)
+	@PutMapping("/update/{id}")
+	public fees updatefee(@RequestBody fees f, @PathVariable("id") Long id)
     {
-        return feeService.updatestudent(f, student);
+        return FS.updatefee(f, id);
     }
 	
 }

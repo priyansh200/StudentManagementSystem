@@ -8,15 +8,15 @@ import jakarta.persistence.OneToOne;
 @Entity
 public class Course {
 	@Id
-	private int id;
+	private Long id;
 	private String Course_name;
 	@OneToOne
     @JoinColumn(name = "teacher", referencedColumnName = "id")
 	private Teacher teacher;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	

@@ -9,16 +9,16 @@ import jakarta.persistence.OneToOne;
 public class Department {
 
 	@Id
-	private int id;
+	private Long id;
 	private String department_name;
 	private String Head_of_department;
 	@OneToOne
     @JoinColumn(name = "course", referencedColumnName = "id")
 	private Course course;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getDepartment_name() {

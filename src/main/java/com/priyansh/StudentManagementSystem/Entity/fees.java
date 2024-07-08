@@ -7,9 +7,8 @@ import jakarta.persistence.OneToOne;
 
 @Entity
 public class fees {
-	
 	@Id
-	private int id;
+	private Long id;
 	private String fees;
 	private String status;
 	@OneToOne
@@ -36,10 +35,10 @@ public class fees {
 	}
 	
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public fees() {

@@ -13,13 +13,9 @@ public class StudentServiceImplementation implements StudentService {
 	@Autowired
 	StudnetRepository Sr ; 
 	
-	
-	@Override
 	public Student addStudent(Student s) {
 		return Sr.save(s);
 	}
-	
-	
 	
 	public List<Student> getStudent(){
 		return Sr.findAll();
