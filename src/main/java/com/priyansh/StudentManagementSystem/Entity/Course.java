@@ -3,14 +3,14 @@ package com.priyansh.StudentManagementSystem.Entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Course {
 	@Id
 	private Long id;
 	private String Course_name;
-	@OneToOne
+	@ManyToOne
     @JoinColumn(name = "teacher", referencedColumnName = "id")
 	private Teacher teacher;
 	public Long getId() {

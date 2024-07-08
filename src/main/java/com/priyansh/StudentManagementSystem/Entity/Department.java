@@ -3,7 +3,7 @@ package com.priyansh.StudentManagementSystem.Entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 @Entity
 
 public class Department {
@@ -12,7 +12,7 @@ public class Department {
 	private Long id;
 	private String department_name;
 	private String Head_of_department;
-	@OneToOne
+	@ManyToOne
     @JoinColumn(name = "course", referencedColumnName = "id")
 	private Course course;
 	public Long getId() {
