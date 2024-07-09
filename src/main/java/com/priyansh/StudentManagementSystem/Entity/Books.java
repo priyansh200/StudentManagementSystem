@@ -1,5 +1,7 @@
 package com.priyansh.StudentManagementSystem.Entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -11,6 +13,7 @@ public class Books {
 	private Long id;
 	private String Book_name;
 	private String author;
+	private Date date;
 	@ManyToOne
     @JoinColumn(name = "student", referencedColumnName = "id")
 	private Student student;
@@ -39,13 +42,21 @@ public class Books {
 	public void setStudent(Student student) {
 		this.student = student;
 	}
+	
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
 	public Books() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "Books [ Book_name=" + Book_name + ", author=" + author + ", student=" + student + "]";
+		return "Books [Book_name=" + Book_name + ", author=" + author + ", date=" + date + ", student=" + student + "]";
 	}
+	
 	
 }
