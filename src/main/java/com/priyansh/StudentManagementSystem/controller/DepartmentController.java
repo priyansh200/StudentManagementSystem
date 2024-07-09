@@ -12,8 +12,6 @@ import com.priyansh.StudentManagementSystem.Entity.Course;
 import com.priyansh.StudentManagementSystem.Entity.Department;
 import com.priyansh.StudentManagementSystem.Entity.Student;
 import com.priyansh.StudentManagementSystem.Entity.Teacher;
-import com.priyansh.StudentManagementSystem.repository.CourseRepository;
-import com.priyansh.StudentManagementSystem.repository.TeacherRepository;
 import com.priyansh.StudentManagementSystem.service.CourseService;
 import com.priyansh.StudentManagementSystem.service.DepartmentService;
 import com.priyansh.StudentManagementSystem.service.StudentService;

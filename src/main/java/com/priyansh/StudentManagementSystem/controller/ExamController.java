@@ -7,20 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.priyansh.StudentManagementSystem.Entity.Course;
-import com.priyansh.StudentManagementSystem.service.CourseService;
+import com.priyansh.StudentManagementSystem.Entity.Exam;
+import com.priyansh.StudentManagementSystem.service.ExamService;
 
 @RestController
-@RequestMapping("/Teacher")
-public class TeacherController {
-
-
+@RequestMapping("/Result")
+public class ExamController {
 	
 	@Autowired
-	private CourseService CS;
-	
-	@GetMapping("/CBT")
-	public List<Course> getCourse(){
-		return CS.getCourse();
+	ExamService ES;
+
+	@GetMapping("/SR")
+	public List<Exam> getExam(){
+		return ES.getExam();
 	}
 }
